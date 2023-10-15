@@ -45,7 +45,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           const SizedBox(
             height: 40,
           ),
-          BlocBuilder(
+          BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
               return CustomButton(
                 isLoaging: state is AddNoteLoading ? true : false,
@@ -67,6 +67,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 },
               );
             },
+          ),
+          const SizedBox(
+            height: 12,
           ),
         ],
       ),
