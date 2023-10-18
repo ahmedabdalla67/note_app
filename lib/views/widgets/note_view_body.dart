@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:note_app/cubits/fetch_all_notes_cubit/fetch_all_notes_cubit.dart';
 import 'package:note_app/views/widgets/custom_app_bar.dart';
 import 'package:note_app/views/widgets/note_list_view.dart';
 
@@ -15,7 +15,7 @@ class _NoteViewBodyState extends State<NoteViewBody> {
   @override
   void initState() {
     super.initState();
-    BlocProvider.of<AddNoteCubit>(context).fetchNotes();
+    BlocProvider.of<FetchAllNotesCubit>(context).fetchNotes();
   }
 
   @override
