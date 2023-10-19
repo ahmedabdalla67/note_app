@@ -23,7 +23,9 @@ class CustomNoteItem extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return const EditeNoteView();
+                return EditeNoteView(
+                  note: noteModel,
+                );
               },
             ),
           );
